@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+
+{% block title %}
+Proveedor Registrado
+{% endblock %}
+
+{% block content %}
+
+<div class="row justify-content-center">
+
+    <div class="col-12 col-md-8">
+
+        <div class="alert alert-success">
+            Los datos del proveedor fueron recibidos correctamente.
+        </div>
+
+        <div class="card shadow-sm">
+
+            <div class="card-body">
+
+                <h2 class="card-title mb-4">
+                    Confirmación de Proveedor
+                </h2>
+
+                <table class="table table-bordered table-striped">
+
+                    <tbody>
+
+                        <tr>
+                            <th>Empresa</th>
+                            <td>{{ empresa }}</td>
+                        </tr>
+
+                        <tr>
+                            <th>Contacto</th>
+                            <td>{{ contacto }}</td>
+                        </tr>
+
+                        <tr>
+                            <th>NIT</th>
+                            <td>{{ nit }}</td>
+                        </tr>
+
+                        <tr>
+                            <th>Producto / Servicio</th>
+                            <td>{{ tipo }}</td>
+                        </tr>
+
+                        <tr>
+                            <th>Condición de pago</th>
+                            <td>{{ pago }}</td>
+                        </tr>
+
+                        <tr>
+                            <th>Proveedor activo</th>
+                            <td>{{ activo }}</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+                <div class="alert alert-warning">
+                    Estos datos todavía no se guardan de forma permanente.
+                </div>
+
+                <a
+                    href="{{ url_for('proveedores') }}"
+                    class="btn btn-secondary">
+                    Registrar otro proveedor
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}
