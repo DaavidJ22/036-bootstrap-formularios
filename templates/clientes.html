@@ -18,7 +18,7 @@ Registro de Clientes
                     Registro de Clientes
                 </h2>
 
-                <form method="POST">
+                <form method="POST" id="formClientes">
 
                     <div class="mb-3">
                         <label for="nombre" class="form-label">
@@ -33,7 +33,6 @@ Registro de Clientes
                             required>
                     </div>
 
-
                     <div class="mb-3">
                         <label for="nit" class="form-label">
                             NIT
@@ -46,7 +45,6 @@ Registro de Clientes
                             name="nit"
                             required>
                     </div>
-
 
                     <div class="mb-3">
                         <label for="correo" class="form-label">
@@ -61,7 +59,6 @@ Registro de Clientes
                             required>
                     </div>
 
-
                     <div class="mb-3">
                         <label for="telefono" class="form-label">
                             Teléfono
@@ -74,7 +71,6 @@ Registro de Clientes
                             name="telefono"
                             required>
                     </div>
-
 
                     <div class="mb-3">
                         <label for="direccion" class="form-label">
@@ -89,14 +85,72 @@ Registro de Clientes
                             required></textarea>
                     </div>
 
-
                     <button
-                        type="submit"
-                        class="btn btn-primary">
+                        type="button"
+                        class="btn btn-primary"
+                        data-bs-toggle="modal"
+                        data-bs-target="#confirmarRegistro">
                         Registrar Cliente
                     </button>
 
                 </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<div
+    class="modal fade"
+    id="confirmarRegistro"
+    tabindex="-1"
+    aria-labelledby="tituloModal"
+    aria-hidden="true">
+
+    <div class="modal-dialog">
+
+        <div class="modal-content">
+
+            <div class="modal-header">
+
+                <h5
+                    class="modal-title"
+                    id="tituloModal">
+                    Confirmar registro
+                </h5>
+
+                <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Cerrar">
+                </button>
+
+            </div>
+
+            <div class="modal-body">
+                ¿Deseas enviar la información del cliente?
+            </div>
+
+            <div class="modal-footer">
+
+                <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-bs-dismiss="modal">
+                    Cancelar
+                </button>
+
+                <button
+                    type="submit"
+                    class="btn btn-primary"
+                    form="formClientes">
+                    Confirmar
+                </button>
 
             </div>
 
