@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+
+{% block title %}
+Cliente Registrado
+{% endblock %}
+
+{% block content %}
+
+<div class="row justify-content-center">
+
+    <div class="col-12 col-md-8">
+
+        <div class="alert alert-success">
+            Los datos del cliente fueron recibidos correctamente.
+        </div>
+
+        <div class="card shadow-sm">
+
+            <div class="card-body">
+
+                <h2 class="card-title mb-4">
+                    Confirmación de Cliente
+                </h2>
+
+                <table class="table table-bordered">
+
+                    <tbody>
+
+                        <tr>
+                            <th>Nombre</th>
+                            <td>{{ nombre }}</td>
+                        </tr>
+
+                        <tr>
+                            <th>NIT</th>
+                            <td>{{ nit }}</td>
+                        </tr>
+
+                        <tr>
+                            <th>Correo</th>
+                            <td>{{ correo }}</td>
+                        </tr>
+
+                        <tr>
+                            <th>Teléfono</th>
+                            <td>{{ telefono }}</td>
+                        </tr>
+
+                        <tr>
+                            <th>Dirección</th>
+                            <td>{{ direccion }}</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+                <div class="alert alert-warning">
+                    Esta información todavía no se guarda de forma permanente.
+                </div>
+
+                <a
+                    href="{{ url_for('clientes') }}"
+                    class="btn btn-secondary">
+                    Registrar otro cliente
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}
