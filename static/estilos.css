@@ -1,0 +1,11 @@
+body {
+    background-color: #f5f7fa;
+}
+
+main {
+    min-height: 70vh;
+}
+
+footer {
+    margin-top: auto;
+}
