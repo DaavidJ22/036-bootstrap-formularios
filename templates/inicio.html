@@ -1,0 +1,110 @@
+{% extends "base.html" %}
+
+{% block title %}
+Inicio
+{% endblock %}
+
+{% block content %}
+
+<div class="text-center mb-5">
+
+    <h1 class="display-5 fw-bold">
+        Sistema de Gestión Comercial
+    </h1>
+
+    <p class="lead">
+        Aplicación web desarrollada con Flask, Jinja2 y Bootstrap
+        para practicar formularios y procesamiento de datos.
+    </p>
+
+</div>
+
+
+<div class="row g-4">
+
+    <div class="col-12 col-md-4">
+
+        <div class="card h-100 shadow-sm">
+
+            <div class="card-body">
+
+                <h5 class="card-title">
+                    Clientes
+                </h5>
+
+                <p class="card-text">
+                    Registra información de clientes como nombre,
+                    NIT, correo, teléfono y dirección.
+                </p>
+
+                <a
+                    href="{{ url_for('clientes') }}"
+                    class="btn btn-primary">
+                    Ir a Clientes
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="col-12 col-md-4">
+
+        <div class="card h-100 shadow-sm">
+
+            <div class="card-body">
+
+                <h5 class="card-title">
+                    Proveedores
+                </h5>
+
+                <p class="card-text">
+                    Registra proveedores y la información relacionada
+                    con sus productos, servicios y condiciones de pago.
+                </p>
+
+                <a
+                    href="{{ url_for('proveedores') }}"
+                    class="btn btn-primary">
+                    Ir a Proveedores
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="col-12 col-md-4">
+
+        <div class="card h-100 shadow-sm">
+
+            <div class="card-body">
+
+                <h5 class="card-title">
+                    Inicio de sesión
+                </h5>
+
+                <p class="card-text">
+                    Ingresa al sistema utilizando un usuario
+                    y contraseña definidos en la aplicación.
+                </p>
+
+                <a
+                    href="{{ url_for('login') }}"
+                    class="btn btn-primary">
+                    Ir al Login
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}
