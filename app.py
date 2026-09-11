@@ -63,7 +63,30 @@ def proveedores():
 
 @app.route("/login", methods=["GET", "POST"])
 def login():
-    pass
+    mensaje = None
+    tipo_alerta = None
+    recordar = False
+
+    if request.method == "POST":
+        usuario = request.form["usuario"]
+        contrasena = request.form["contrasena"]
+        recordar = request.form.get("recordar") == "on"
+
+        if usuario in USUARIOS and USUARIOS[usuario] == contrasena:
+            mensaje = f"Bienvenido, {usuario}. Inicio de sesión correcto."
+            tipo_alerta = "success"
+        else:
+            mensaje = "Usuario o contraseña incorrectos."
+            tipo_alerta = "danger"
+
+        return render_template(
+            "login_resultado.html",
+            mensaje=mensaje,
+            tipo_alerta=tipo_alerta,
+            recordar=recordar
+        )
+
+    return render_template("login.html")
 
 
 if __name__ == "__main__":

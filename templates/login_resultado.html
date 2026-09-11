@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+
+{% block title %}
+Resultado del Login
+{% endblock %}
+
+{% block content %}
+
+<div class="row justify-content-center">
+
+    <div class="col-12 col-md-6">
+
+        <div class="alert alert-{{ tipo_alerta }} text-center">
+
+            {{ mensaje }}
+
+        </div>
+
+
+        <div class="card shadow-sm">
+
+            <div class="card-body text-center">
+
+                <h2 class="card-title">
+                    Resultado
+                </h2>
+
+                {% if recordar %}
+
+                    <p>
+                        La opción "Recordarme" fue seleccionada.
+                    </p>
+
+                {% else %}
+
+                    <p>
+                        La opción "Recordarme" no fue seleccionada.
+                    </p>
+
+                {% endif %}
+
+
+                <a
+                    href="{{ url_for('login') }}"
+                    class="btn btn-secondary">
+                    Volver al Login
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}
